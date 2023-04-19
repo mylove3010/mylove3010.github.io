@@ -17,7 +17,7 @@ function App() {
     let text = items[id];
     if (app) {
       if (count < text.length) {
-        if (id == items.length - 1) {
+        if (id === items.length - 1) {
           // app.attributes += "style";
           // app.setAttribute("style", "color: red;outline: none;");
           app.style += "color: red;outline: none;"
@@ -28,7 +28,7 @@ function App() {
           typingEffect();
         }, Math.floor(Math.random(10) * 100));
       } else {
-        if (id == items.length - 1) return;
+        if (id === items.length - 1) return;
         count = 0;
         id = id + 1 < items.length ? id + 1 : 0;
         setTimeout(() => {
