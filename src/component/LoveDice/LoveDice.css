@@ -13,14 +13,21 @@ html {
   padding: 0;
   margin: 0;
 }
-
+.test {
+  height: 100vh; /* Magic here */
+  width: 100vw; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./background.jpg);
+}
 body {
-  /* background: url('https://npr.brightspotcdn.com/dims4/default/711b387/2147483647/strip/true/crop/1200x675+0+37/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1a%2Fa2%2Ff322553e43b78aefe2824628ca33%2Fhearts-istock-happy-lucky.jpg'); */
   backdrop-filter: blur(2px);
   perspective: 1000px;
   color: #ffffcc;
   display: flex;
-  justify-content: center;
+  flex: 1;
+  overflow: hidden;
 }
 
 #pointRollButton {
@@ -116,9 +123,9 @@ button:active {
 }
 
 .dice-board {
-  width: 70%;
+  width: 100%;
   height: 100vh;
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   align-items: center;
 }
@@ -290,6 +297,8 @@ body {
   perspective: 1000px;
   pointer-events: none;
   transition: z-index 0s 0.8s;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .popups-cont.s--popup-active {
@@ -1689,6 +1698,7 @@ body {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .popup__close:before,
@@ -1750,4 +1760,144 @@ body {
   background-color: #000;
   color: #fff;
   letter-spacing: 2px;
+}
+@media only screen and (max-width: 1280px) {
+  .popup__text {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    color: #d45c75;
+  }
+  .popup__content {
+    position: relative;
+    height: 100vh;
+    padding: 30px;
+    background: url(./hhh.jpg);
+    color: sienna;
+    transition: opacity 0.2s;
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 360px) {
+  /* điện thoại samsung có vẻ ngang ip12 pro */
+  body {
+    backdrop-filter: blur(2px);
+    perspective: 1000px;
+    color: #ffffcc;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    background: url(./background.jpg);
+  }
+  .test {
+    background: none;
+  }
+  .dice-board {
+    display: flex;
+    flex: 1;
+  }
+  .container-dice {
+    /* margin: 50px auto 0 auto; */
+    width: auto;
+    justify-content: center;
+  }
+
+  #dice1 {
+    /* align-items: center; */
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+  .div-rollbtn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .roll-button {
+    width: 80vw;
+    padding: 20px;
+    height: fit-content;
+  }
+
+  button:hover,
+  button:active {
+    outline: none;
+    background: hotpink;
+    cursor: pointer;
+    padding: 40px 0;
+    margin-top: 15px;
+  }
+  .side {
+    background-color: pink;
+    /*rgba(255, 255, 204, 0.97); */
+    position: absolute;
+    width: 350px;
+    height: 306px;
+    border: 2px solid pink;
+  }
+
+  .popups-cont__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.35s;
+    /* background-color: red; */
+  }
+  .popup__content {
+    position: relative;
+    height: 100vh;
+    padding: 30px;
+    color: sienna;
+    transition: opacity 0.2s;
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    background: url(./hhh.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .popup__pieces {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .popup__text {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    color: #ff0033;
+    background-color: rgb(217, 0, 255);
+  }
+  .popups-cont {
+    width: 110vw;
+    display: flex;
+  }
+  .popup {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform-style: preserve-3d;
+  }
 }

@@ -50,17 +50,17 @@ function App() {
   const template2 = () => { }
   const template3 = () => { }
   const template4 = () => { }
+
   return (
-    <div>
+    <>
+      < LoveDice />
       {/* <div
         className="container typing-demo"
         style={{ color: "black", outline: "none!important" }}
         tabIndex="0"
         id="app"
-      ></div> */}
-      <LoveDice />
+      ></div> */}</>
 
-    </div>
   );
 }
 

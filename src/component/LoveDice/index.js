@@ -132,111 +132,115 @@ export default function LoveDice() {
     // END Come out roll function
 
     return (
-        <div>
+        <div className='test'>
             <div className="dice-board">
                 <div className="container-dice">
-                    <div id='dice1' className="dice dice-one">
-                        <div id="dice-one-side-one" className='side one'>
-                            <img alt="# " width="100%"
-                                src={require("./hh.png")} />
-                        </div>
-                        <div id="dice-one-side-two" className='side two'>
-                            <div className="divot two-1">
+                    <div className='test2'>
+                        <div id='dice1' onClick={() => comeOutRoll()} className="dice dice-one">
+                            <div id="dice-one-side-one" className='side one'>
                                 <img alt="# " width="100%"
                                     src={require("./hh.png")} />
+                            </div>
+                            <div id="dice-one-side-two" className='side two'>
+                                <div className="divot two-1">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
 
-                            </div>
-                            <div className="divot two-2">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
+                                </div>
+                                <div className="divot two-2">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
 
+                                </div>
                             </div>
-                        </div>
-                        <div id="dice-one-side-three" className='side three'>
-                            <div className="divot three-1">
-                                <img alt="# " width="100%"
+                            <div id="dice-one-side-three" className='side three'>
+                                <div className="divot three-1">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot three-2">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot three-3">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                            </div>
+                            <div id="dice-one-side-four" className='side four'>
+                                <div className="divot four-1">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot four-2">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot four-3">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot four-4">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                            </div>
+                            <div id="dice-one-side-five" className='side five'>
+                                <div className="divot five-1">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot five-2">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot five-3">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot five-4">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot five-5">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                            </div>
+                            <div id="dice-one-side-six" className='side six'>
+                                <div className="divot six-1">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot six-2"> <img alt="# " width="100%"
                                     src={require("./hh.png")} />
-                            </div>
-                            <div className="divot three-2">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot three-3">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                        </div>
-                        <div id="dice-one-side-four" className='side four'>
-                            <div className="divot four-1">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot four-2">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot four-3">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot four-4">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                        </div>
-                        <div id="dice-one-side-five" className='side five'>
-                            <div className="divot five-1">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot five-2">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot five-3">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot five-4">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot five-5">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                        </div>
-                        <div id="dice-one-side-six" className='side six'>
-                            <div className="divot six-1">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot six-2"> <img alt="# " width="100%"
-                                src={require("./hh.png")} />
-                            </div>
-                            <div className="divot six-3">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot six-4">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot six-5">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
-                            </div>
-                            <div className="divot six-6">
-                                <img alt="# " width="100%"
-                                    src={require("./hh.png")} />
+                                </div>
+                                <div className="divot six-3">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot six-4">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot six-5">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
+                                <div className="divot six-6">
+                                    <img alt="# " width="100%"
+                                        src={require("./hh.png")} />
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button id='comeOutButton' onClick={() => comeOutRoll()} className='roll-button'>ROLL ME NOW</button>
+                    <div className='div-rollbtn'>
+                        <button id='comeOutButton' onClick={() => comeOutRoll()} className='roll-button'>ROLL ME NOW</button>
+                    </div>
                 </div>
             </div>
 
-            <div className="popups-cont">
+            <div style={{ justifyContent: "center", alignItems: 'baseline' }} className="popups-cont">
                 <div className="popups-cont__overlay" onClick={() => closeHandler()}></div>
                 <div className="popup">
                     <div className="popup__pieces"></div>
