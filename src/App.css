@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.body {
+  font-size: 15px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -12,47 +15,17 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.typing-demo {
-  /* width: 25ch; */
-  /* animation: typing 2s steps(20), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace; */
+#main-div {
+  outline: none;
+}
+.typing-div {
   font-size: 2em;
+  color: black;
+  outline: none;
+  display: inline-block;
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-typing {
+  display: inline-block;
+  width: 100vw;
+  text-align: center;
 }

@@ -24,7 +24,7 @@ html {
 body {
   backdrop-filter: blur(2px);
   perspective: 1000px;
-  color: #ffffcc;
+  /* color: #ffffcc; */
   display: flex;
   flex: 1;
   overflow: hidden;
