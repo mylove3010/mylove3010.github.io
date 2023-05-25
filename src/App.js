@@ -51,7 +51,9 @@ function App() {
   }, []);
 
 
-  return <div id="main-div" style={whatScreen === "0" ? { paddingTop: "calc(50vh - 92px)" } : {}}>
+  return <div id="main-div"
+    // style={whatScreen === "0" ? { paddingTop: "calc(50vh - 92px)" } : {}}
+  >
     {whatScreen === "0" && template0()}
     {whatScreen === "1" && template1()}
     {whatScreen === "2" && template2()}

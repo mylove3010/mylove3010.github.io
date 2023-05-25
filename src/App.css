@@ -17,6 +17,11 @@
 }
 #main-div {
   outline: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .typing-div {
   font-size: 2em;
@@ -25,7 +30,14 @@
   display: inline-block;
 }
 .item-typing {
-  display: inline-block;
-  width: 100vw;
+  display: flex;
+  /* width: 100vw; */
   text-align: center;
+  align-items: flex-start;
+  /* flex: 1; */
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
