@@ -7,6 +7,25 @@ function App() {
   const [whatScreen, setWhatScreen] = useState("0");
   const [cursorEnd, setCursorEnd] = useState([])
   const [isTyping, setIsTyping] = useState(true)
+  const [clickAmount, setClickAmount] = useState(0)
+  const widthScreen = window.innerWidth;
+  const heightScreen = window.innerHeight;
+  useEffect(() => {
+    const mainScreenDiv = document.getElementById("main-div");
+    mainScreenDiv.onclick = () => {
+      if (interval) {
+        clearInterval(interval)
+      }
+      const interval = setInterval(() => {
+        if (widthScreen < 800 && heightScreen < 800) {
+          setClickAmount(clickAmount + 1);
+
+        }
+      }, 1000);
+
+    }
+  }, [widthScreen, clickAmount, heightScreen])
+
   const mainKeyup = (e) => {
     console.log(e.key);
     if (e.key === "1" || e.key === "2" || e.key === "3" || e.key === "4" || e.key === "0") {
@@ -52,7 +71,7 @@ function App() {
 
 
   return <div id="main-div"
-    // style={whatScreen === "0" ? { paddingTop: "calc(50vh - 92px)" } : {}}
+  // style={whatScreen === "0" ? { paddingTop: "calc(50vh - 92px)" } : {}}
   >
     {whatScreen === "0" && template0()}
     {whatScreen === "1" && template1()}
