@@ -41,3 +41,11 @@
   height: 100vh;
   display: flex;
 }
+.btn-reset {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  
+}

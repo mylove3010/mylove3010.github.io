@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./App.css";
 import LoveDice from "./component/LoveDice";
 import { TypeAnimation } from "react-type-animation";
@@ -7,38 +7,43 @@ function App() {
   const [whatScreen, setWhatScreen] = useState("0");
   const [cursorEnd, setCursorEnd] = useState([])
   const [isTyping, setIsTyping] = useState(true)
-  const [clickAmount, setClickAmount] = useState(0)
+  const [isClick, setIsClick] = useState(false)
+  const clickCount = useRef(0)
   const widthScreen = window.innerWidth;
   const heightScreen = window.innerHeight;
   useEffect(() => {
-    const mainScreenDiv = document.getElementById("main-div");
-    mainScreenDiv.onclick = () => {
-      if (interval) {
-        clearInterval(interval)
-      }
-      const interval = setInterval(() => {
-        if (widthScreen < 800 && heightScreen < 800) {
-          setClickAmount(clickAmount + 1);
-
-        }
-      }, 1000);
-
+    if (isClick) {
+      setTimeout(() => {
+        setWhatScreen(clickCount.current)
+        clickCount.current = 0
+        setIsClick(false)
+      }, 1500);
     }
-  }, [widthScreen, clickAmount, heightScreen])
+  }, [isClick])
+
+  const mainDivClick = () => {
+    //code for mobile browser
+    if ((widthScreen < 800 || heightScreen < 800) && whatScreen === "0") {
+      setIsClick(true)
+      if (clickCount.current <= 3)
+        clickCount.current = clickCount.current + 1
+      else
+        clickCount.current = 4
+    }
+  }
 
   const mainKeyup = (e) => {
-    console.log(e.key);
+    //code for web browser
     if (e.key === "1" || e.key === "2" || e.key === "3" || e.key === "4" || e.key === "0") {
-      // app.removeChild(template1)
       setWhatScreen(e.key);
     }
   };
   const items = [
     "Xin chào bạn iu của mình!!!",
-    "Sau đây là 1 chiếc web mình viết tặng bạn",
-    "Có 4 giao diện khác nhau",
-    "Có thể nhấn phím 1 đến 4 để xem",
-    "Ký tên: người iu của bạn",
+    // "Sau đây là 1 chiếc web mình viết tặng bạn",
+    // "Có 4 giao diện khác nhau",
+    // "Có thể nhấn phím 1 đến 4 để xem",
+    // "Ký tên: người iu của bạn",
   ];
   const template0 = () => {
     return items.map((item, i) => {
@@ -70,9 +75,12 @@ function App() {
   }, []);
 
 
-  return <div id="main-div"
+  return <div id="main-div" onClick={() => mainDivClick()}
   // style={whatScreen === "0" ? { paddingTop: "calc(50vh - 92px)" } : {}}
   >
+    <button type="button" className="btn btn-primary btn-lg btn-block btn-reset">
+      <i className="fa-solid fa-user"></i>
+    </button>
     {whatScreen === "0" && template0()}
     {whatScreen === "1" && template1()}
     {whatScreen === "2" && template2()}
