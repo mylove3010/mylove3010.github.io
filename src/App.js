@@ -1,4 +1,5 @@
 /* eslint-disable */
+import '@fortawesome/fontawesome-free/css/all.css';
 import { useEffect, useState, useRef } from "react";
 import "./App.css";
 import LoveDice from "./component/LoveDice";
@@ -79,7 +80,7 @@ function App() {
   // style={whatScreen === "0" ? { paddingTop: "calc(50vh - 92px)" } : {}}
   >
     <button type="button" className="btn btn-primary btn-lg btn-block btn-reset">
-      <i className="fa-solid fa-user"></i>
+      <i class="fa-regular fa-rectangle-xmark icon-reset"></i>
     </button>
     {whatScreen === "0" && template0()}
     {whatScreen === "1" && template1()}

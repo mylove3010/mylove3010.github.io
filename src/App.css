@@ -45,7 +45,19 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: auto;
-  height: auto;
-  
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: white;
+  box-shadow: none;
+  border-radius: 5px;
+  color: red;
+  margin: 10px;
+}
+.btn-reset:hover {
+  background: red !important;
+  color: white;
+  padding: 20px;
 }
